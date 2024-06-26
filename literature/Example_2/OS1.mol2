@@ -1,0 +1,12 @@
+@<TRIPOS>MOLECULE
+OS1
+    1     0     1     0     0
+SMALL
+RESP Charge
+ 
+ 
+@<TRIPOS>ATOM
+      1 OS         25.8390   11.3800    7.5260 M1        1 OS1     -0.254866
+@<TRIPOS>BOND
+@<TRIPOS>SUBSTRUCTURE
+     1 OS1         1 TEMP              0 ****  ****    0 ROOT

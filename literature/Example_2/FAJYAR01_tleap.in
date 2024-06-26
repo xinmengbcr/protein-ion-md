@@ -1,0 +1,32 @@
+source leaprc.ff14SB
+source leaprc.gaff
+addAtomTypes {
+        { "M1"  "Os" "sp3" }
+        { "Y1"  "N" "sp3" }
+        { "Y2"  "N" "sp3" }
+        { "Y3"  "N" "sp3" }
+        { "Y4"  "N" "sp3" }
+        { "Y5"  "N" "sp3" }
+        { "Y6"  "N" "sp3" }
+}
+loadamberparams frcmod.ions1lsm_hfe_tip3p
+OS1 = loadmol2 OS1.mol2
+RS1 = loadmol2 RS1.mol2
+loadamberparams RES.frcmod
+loadamberparams FAJYAR01_mcpbpy.frcmod
+mol = loadpdb FAJYAR01_mcpbpy.pdb
+bond mol.1.OS mol.2.N1
+bond mol.1.OS mol.2.N2
+bond mol.1.OS mol.2.N3
+bond mol.1.OS mol.2.N4
+bond mol.1.OS mol.2.N5
+bond mol.1.OS mol.2.N6
+savepdb mol FAJYAR01_dry.pdb
+saveamberparm mol FAJYAR01_dry.prmtop FAJYAR01_dry.inpcrd
+solvatebox mol TIP3PBOX 10.0
+addions mol Na+ 0
+addions mol Cl- 0
+savepdb mol FAJYAR01_solv.pdb
+saveamberparm mol FAJYAR01_solv.prmtop FAJYAR01_solv.inpcrd
+quit
+ 

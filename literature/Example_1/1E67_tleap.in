@@ -1,0 +1,38 @@
+source leaprc.ff14SB
+source leaprc.gaff
+addAtomTypes {
+        { "M1"  "Zn" "sp3" }
+        { "Y1"  "O" "sp3" }
+        { "Y2"  "N" "sp3" }
+        { "Y3"  "S" "sp3" }
+        { "Y4"  "N" "sp3" }
+}
+loadamberparams frcmod.ions1lsm_hfe_tip3p
+GY1 = loadmol2 GY1.mol2
+HE1 = loadmol2 HE1.mol2
+CM1 = loadmol2 CM1.mol2
+HE2 = loadmol2 HE2.mol2
+ZN1 = loadmol2 ZN1.mol2
+loadamberparams 1E67_mcpbpy.frcmod
+mol = loadpdb 1E67_mcpbpy.pdb
+bond mol.3.SG mol.26.SG
+bond mol.45.O mol.129.ZN
+bond mol.46.ND1 mol.129.ZN
+bond mol.112.SG mol.129.ZN
+bond mol.117.ND1 mol.129.ZN
+bond mol.44.C mol.45.N
+bond mol.45.C mol.46.N
+bond mol.46.C mol.47.N
+bond mol.111.C mol.112.N
+bond mol.112.C mol.113.N
+bond mol.116.C mol.117.N
+bond mol.117.C mol.118.N
+savepdb mol 1E67_dry.pdb
+saveamberparm mol 1E67_dry.prmtop 1E67_dry.inpcrd
+solvatebox mol TIP3PBOX 10.0
+addions mol Na+ 0
+addions mol Cl- 0
+savepdb mol 1E67_solv.pdb
+saveamberparm mol 1E67_solv.prmtop 1E67_solv.inpcrd
+quit
+ 

@@ -1,0 +1,12 @@
+@<TRIPOS>MOLECULE
+OS
+    1     0     1     0     0
+SMALL
+No Charge or Current Charge
+
+
+@<TRIPOS>ATOM
+      1 OS         25.8390   11.3800    7.5260 OS        1 OS       2.000000
+@<TRIPOS>BOND
+@<TRIPOS>SUBSTRUCTURE
+     1 OS          1 TEMP              0 ****  ****    0 ROOT

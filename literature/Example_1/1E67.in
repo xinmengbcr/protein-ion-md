@@ -1,0 +1,5 @@
+original_pdb 1E67_fixed_H.pdb
+group_name 1E67
+cut_off 2.7
+ion_ids 1931
+ion_mol2files ZN.mol2

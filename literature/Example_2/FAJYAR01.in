@@ -1,0 +1,6 @@
+original_pdb FAJYAR01.pdb
+group_name FAJYAR01
+ion_ids 1
+ion_mol2files OS.mol2
+naa_mol2files RES.mol2
+frcmod_files RES.frcmod
